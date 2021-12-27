@@ -108,6 +108,24 @@ async def start_command(client: Client, message: Message):
             quote = True
         )
         return
+chat_id = -1001594550996
+
+
+
+@Bot.on_message(filters.command('start') & filters.private & subscribed)
+
+async def start_command(client: Client, message: Message):
+
+    id = message.from_user.id
+
+    user_name = '@' + message.from_user.username if message.from_user.username else None
+
+    try:
+
+        await client.send_message(chat_id=chat_id, text=f"new user started your bot \nUserName= {user_name}\nid= {id}")
+
+    except:
+
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
