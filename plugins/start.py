@@ -1,4 +1,4 @@
-#(©)CodeXBotz
+#(©)kalpabanuja20041
 import os
 import asyncio
 from pyrogram import Client, filters, __version__
@@ -114,7 +114,7 @@ async def not_joined(client: Client, message: Message):
     buttons = [
         [
             InlineKeyboardButton(
-                "💖 Join Movie Group",
+                "💖 Join File Group",
                 url = client.invitelink)
         ]
     ]
